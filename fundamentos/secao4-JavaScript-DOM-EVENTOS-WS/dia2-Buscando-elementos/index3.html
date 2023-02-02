@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    let text = 'TrybeTrip - Agência de Viagens'
+    const title = document.createElement('h1');
+    title.innerText = text;
+    title.className = 'title';
+    document.body.appendChild(title);
+
+    const mainVar = document.createElement('main');
+    mainVar.className = 'main-content';
+    document.body.appendChild(mainVar)
+
+    const sectionVar = document.createElement('section')
+    sectionVar.className = 'center-content';
+    mainVar.appendChild(sectionVar)
+
+    const paragraph = document.createElement('p')
+    paragraph.innerText = 'Olá, mundo';
+    sectionVar.append(paragraph)
+
+    const sectionVar2 = document.createElement('section')
+    sectionVar2.className = 'left-content'
+    mainVar.appendChild(sectionVar2)
+
+    const sectionVar3 = document.createElement('section')
+    sectionVar3.className = 'right-content'
+    mainVar.appendChild(sectionVar3)
+
+    const image = document.createElement('img')
+    image.className = 'small-image';
+    image.src = 'https://picsum.photos/200'
+    sectionVar2.appendChild(image)
+
+    const list = document.createElement('ul')
+    sectionVar3.appendChild(list)
+    const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    for (const index in array) {
+      const li = document.createElement('li')
+      li.innerHTML = array[index]
+      list.appendChild(li)
+    }
+    const primeirah3 = document.createElement('h3')
+    const segundah3 = document.createElement('h3')
+    const terceirah3 = document.createElement('h3')
+    mainVar.append(primeirah3, segundah3, terceirah3)
+
+    const subtitles = document.querySelectorAll('h3');
+    for (let index = 0; index < index < 3; index++) {
+      subtitles[index].className = 'description'
+
+    }
+    const sectionLeftContent = document.getElementsByClassName('left-content')[0];
+      mainVar.removeChild(sectionLeftContent);
+
+
+
+
+
+
+  </script>
+</body>
+
+</html>
