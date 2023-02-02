@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+            <section id="primeiroFilho"></section>
+            <section id="elementoOndeVoceEsta">
+                <section id="primeiroFilhoDoFilho"></section>
+                <section id="segundoEUltimoFilhoDoFilho"></section>
+            </section>
+            ------
+            <section id="terceiroFilho"></section>
+            <section id="quartoEUltimoFilho"></section>
+        </section>
+    </main>
+    <script>
+        const text = 'filho';
+        let pai = document.querySelector('#pai');
+        let irmao = document.createElement('p')
+        irmao.innerText = text;
+        pai.appendChild(irmao);
+
+        const elementoQueEstou = document.querySelector('#elementoOndeVoceEsta');
+
+        const nameDoFilho = 'neto';
+
+        const filhoDOElementoQueEstou = document.createElement('section')
+        filhoDOElementoQueEstou.innerText = nameDoFilho;
+
+        elementoQueEstou.appendChild(filhoDOElementoQueEstou);
+
+        const primeiroFilhoDoFilhoq = document.querySelector('#primeiroFilhoDoFilho');
+
+        const nomeDoNeto = 'bisneto';
+        const neto = document.createElement('section')
+        neto.innerText = nomeDoNeto;
+
+        primeiroFilhoDoFilhoq.appendChild(neto)
+
+    </script>
+</body>
+
+</html>
